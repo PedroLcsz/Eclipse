@@ -13,8 +13,6 @@ public class TesteFuncionario {
 	public void testGerente() throws Exception {
 		Funcionario pedro = new Gerente("Pedro", "1A1A");
 
-		pedro.calculaSalario();
-
 		assertEquals("Pedro recebe: " + Double.valueOf(4000), pedro.getNome() + " recebe: " + pedro.calculaSalario());
 
 	}
@@ -23,16 +21,12 @@ public class TesteFuncionario {
 	public void testAssistente() throws Exception {
 		Funcionario elton = new Assistente("Elton", "1A2A");
 
-		elton.calculaSalario();
-
 		assertEquals("Elton recebe: " + Double.valueOf(2000), elton.getNome() + " recebe: " + elton.calculaSalario());
 	}
 
 	@Test
 	public void testVendedor() throws Exception {
 		Funcionario alessandro = new Vendedor("Alessandro", "1A3B", 0.15d);
-
-		alessandro.calculaSalario();
 
 		assertEquals("Alessandro recebe: " + Double.valueOf(2300),
 				alessandro.getNome() + " recebe: " + alessandro.calculaSalario());
@@ -57,7 +51,7 @@ public class TesteFuncionario {
 			valTotal += funcionarios.get(i).calculaSalario();
 		}
 
-		assertEquals("Salário total dos funcionários: " + Double.valueOf(8300d),
-				"Salário total dos funcionários: " + valTotal);
+		assertEquals("SalÃ¡rio total dos funcionÃ¡rios: " + Double.valueOf(8300d),
+				"SalÃ¡rio total dos funcionÃ¡rios: " + valTotal);
 	}
 }
